@@ -1,0 +1,2 @@
+PASS: sequence 01->10->00 repeats correctly
+fsm_traffic_tb.v:47: $finish called at 96 (1ps)

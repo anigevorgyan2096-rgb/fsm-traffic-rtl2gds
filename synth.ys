@@ -1,0 +1,7 @@
+read_verilog fsm_traffic.v
+synth -top fsm_traffic -flatten
+dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean -purge
+write_verilog -noattr -noexpr fsm_traffic_synth.v
+stat -liberty sky130_fd_sc_hd__tt_025C_1v80.libfind ~ -name "sky130_fd_sc_hd__tt_025C_1v80.lib"
